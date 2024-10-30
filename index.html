@@ -1,0 +1,740 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shamna_Portfolio.com</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+</head>
+
+<body>
+    <style>
+        body {
+            font-family: 'Times New Roman', Times, serif;
+            padding-top: 70px;
+        }
+
+        .container {
+            width: 100%;
+        }
+
+
+        /* .row { */
+        /* display: flex;
+            flex-wrap: wrap;
+            flex-direction: row; */
+
+        /* margin-left: -15px;
+            margin-right: -15px;
+            padding: 10px;
+        } */
+
+        .nav-link {
+            color: burlywood;
+            position: relative;
+            /* transition: color 0.3s ease-in-out; */
+        }
+
+        .nav-link:hover {
+            color: darkorange;
+
+        }
+
+        .nav-link::after {
+            content: "";
+            position: absolute;
+            width: 0;
+            height: 2px;
+            background-color: darkorange;
+            left: 0;
+            bottom: -5px;
+            transition: width 0.3s ease-in-out;
+        }
+
+        .nav-link:hover::after {
+            width: 100%;
+        }
+
+        .homepg {
+            width: 100%;
+            height: auto;
+
+            /* border: 2px solid black; */
+            display: flex;
+            flex-direction: row-reverse;
+            flex-wrap: nowrap;
+            justify-content: space-around;
+            align-items: center;
+
+            margin-left: 20px;
+        }
+
+
+
+        .homeimg img {
+            /* background-image: url(./pictures/WhatsApp\ Image\ 2024-07-30\ at\ 11.25.37\ AM.jpeg);  */
+            width: 100%;
+            object-fit: cover;
+            max-height: 600px;
+            /* background-size: cover;
+            background-repeat: no-repeat;
+            background-position: right; */
+            /* float: right; */
+            border-radius: 50%;
+            margin: 10px;
+
+
+
+        }
+
+        .hometxt {
+            text-align: center;
+            font-size: 18px;
+            font-family: 'Times New Roman', Times, serif;
+        }
+
+
+
+
+        .aboutme {
+            margin-top: 100px;
+            margin-bottom: 100px;
+            /* background-color:rgb(235, 233, 233); */
+            /* width: 100%;
+            height: 400px;
+
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+
+            margin: 10px 20px 20px 0px;
+            padding-left: 50px; */
+        }
+
+        .about-h {
+            border: 2px;
+            border-radius: 100px;
+            background-color: lightpink;
+            width: 100%;
+            /* height: 100px;
+
+            float: left;
+            justify-content: center;
+            text-align: center;
+            align-items: center;
+            padding: 20px; */
+        }
+
+        .about-p {
+            /* padding-left: 100PX; */
+            /* justify-content: center; */
+            text-align: center;
+            /* float: right; */
+            font-size: 18px;
+        }
+
+         .accordion-flush .accordion-item {
+            border: none;
+            background-color: #f8f9fa;
+            border-radius: 8px;
+            margin-bottom: 10px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        
+        /* Header Style */
+        .accordion-button {
+            font-size: 20px;
+            color: #4a4a4a;
+            font-weight: 100;
+            padding: 15px;
+            background-color: #ffffff;
+            border-radius: 8px;
+        }
+        
+        /* Hover and Active Effects */
+        .accordion-button:not(.collapsed) {
+            background-color: #e9ecef;
+            color: #495057;
+        }
+        .accordion-button:focus {
+            box-shadow: none;
+            border-color: #6c757d;
+        }
+        
+        /* Body Content Styling */
+        .accordion-body {
+            font-size: 1em;
+            color: #343a40;
+            background-color: #ffffff;
+            padding: 15px;
+            border-radius: 0 0 8px 8px;
+        }
+
+        .project-h {
+            margin: 20px;
+        }
+
+        /* .projects-c {
+            display: grid;
+            grid-template-columns: 400px 400px 400px;
+            grid-template-rows: auto auto auto;
+            grid-gap: 30px;
+
+            margin-top: 50px;
+        } */
+
+        .skills-1 {
+            /* background-color: rgb(244, 244, 244); */
+            width: 300px;
+            height: 100px;
+            align-content: center;
+            padding-left: 10px;
+            margin-top: 30px;
+
+            font-size: 25px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .skills-1:hover {
+            transform: scale(1.05);
+            /* Slight zoom effect */
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+            /* Shadow effect */
+        }
+
+        /* .skill-c {
+            display: grid;
+            grid-template-columns: 400px 400px 400px;
+            grid-template-rows: auto auto auto;
+            grid-gap: 30px;
+        } */
+
+        .skills-h {
+            color: lightsalmon;
+            margin: 20px;
+
+        }
+
+        .form {
+            background-color: rgb(241, 240, 240);
+            width: 100%;
+            text-align: center;
+            padding: 30px;
+            box-sizing: border-box;
+        }
+
+        #form-ccnt,
+        #form-cnt {
+            width: 100%;
+            /* height: 150px; */
+            border-radius: 30px;
+            /* text-align: justify; */
+            padding: 20px;
+            margin: 10px;
+            font-size: 20px;
+
+        }
+
+        #form-ccnt {
+            /* width: 100%;
+            height: 50px;
+            border-radius: 30px;
+            padding: 20px;
+            margin: 10px;
+            text-align: justify;
+            font-size: 20px; */
+            text-align: left;
+
+        }
+
+        .btn {
+            width: 100%;
+            font-size: 20px;
+
+        }
+
+        .info {
+            /* float: right; */
+            text-align: left;
+
+            /*              
+            padding:20%; */
+            /* padding-right: 15%; */
+
+            margin-top: 150px;
+            margin-left: 80px;
+            box-sizing: border-box;
+            /* display: flex;
+             flex-direction: column;
+             justify-content: center;
+             height: 100%; */
+        }
+
+        .info-c {
+
+            margin-bottom: 20px;
+            transition: color 0.3s ease, box-shadow 0.3s ease;
+            /* Smooth transition */
+            padding: 10px;
+            border-radius: 10px;
+        }
+
+        .info-c:hover {
+            /* color: #ff6347; Change text color on hover (tomato color) */
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+            /* Shadow effect */
+            background-color: #f9f9f9;
+        }
+
+
+        .info-c img {
+            margin-right: 10px;
+        }
+
+
+        .contact-h {
+            margin: 20px;
+            /* text-align: center; */
+        }
+
+        /* @media (max-width: 768px) {
+    .info {
+        text-align: center;
+        padding-top: 20px;
+    }
+
+    .info-c {
+        margin-bottom: 20px;
+    }
+
+    .btn {
+        width: auto;
+        font-size: 16px;
+    }
+} */
+
+        .footer {
+            width: 100%;
+            text-align: center;
+            color: lightgrey;
+        }
+    </style>
+    <!-- header start -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light p-1 fixed-top">
+        <div class="container-fluid">
+           
+                <a class="navbar-brand fs-1" href="#"  
+                    style="color: burlywood;font-family: 'Times New Roman', Times, serif;">{ SHAMNA E K }</a>
+                <button class="navbar-toggler ms-auto" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
+                    <ul class="navbar-nav ms-auto mb-2 mb-lg-0 fs-5 ">
+                        <li class="nav-item">
+                            <a class="nav-link " aria-current="page" href="#Home">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" aria-current="page" href="#About Me">About
+                                Me</a>
+                        </li>
+                        <li class=" nav-item">
+                            <a class="nav-link" aria-current="page" href="#Projects">Projects</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" aria-current="page" href="#Skills">Skills</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" aria-current="page" href="#Contact">Contact</a>
+                        </li>
+
+                    </ul>
+
+            </a>
+        </div>
+        </div>
+    </nav>
+    <!-- header end -->
+
+    <!-- home page start -->
+
+    <div class="container-fluid">
+        <div class="row">
+            <a name="Home">
+            <div class="homepg">
+                <div class="col-md-6">
+                    <div class="homeimg">
+                        <img src="./pictures/WhatsApp Image 2024-07-30 at 11.25.37 AM.jpeg" alt=""></a>
+                    </div>
+                </div>
+
+                <div class="col-md-6">
+                    <div class="hometxt">
+                        <h3>Hi i'm </h3>
+                        <h1 style="color: lightcoral;">SHAMNA E K</h1> a Front-End Developer
+                        specializing in creating beautiful, responsive websites.
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- home page end -->
+
+    <!-- about page start -->
+    <hr>
+    <div class="container-fluid">
+        <a name="About Me"></a>
+        <div class="aboutme">
+            <div class="row">
+                <div class="col-sm-6"> 
+                    
+                    <div class="about-h p-4">
+                        <h1 style="color: lightsalmon;text-align: center;">About Me</h1>
+                    </div>
+                </div>
+                <div class="col-sm-6">
+                    <div class="about-p">
+                        <p>I am, a motivated and detail-oriented front-end developer with a strong foundation in
+                            HTML, CSS, and JavaScript. As a recent graduate, I am eager to apply my skills in creating
+                            responsive, user-friendly websites. I am passionate about web development and continuously
+                            learning new technologies to improve my craft. I am excited to contribute to dynamic teams
+                            and
+                            take on new challenges in the field of front-end development.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="accordion accordion-flush" id="accordionFlushExample">
+            <div class="accordion-item">
+                <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+                        Post Graduation
+                    </button>
+                </h2>
+                <div id="flush-collapseOne" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                    <div class="accordion-body">
+                        <strong>Malabar Christain College <br>Calicut University</strong><br>M.A Econometrics <br>2022-2024
+                    </div>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
+                        Under Graduation
+                    </button>
+                </h2>
+                <div id="flush-collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                    <div class="accordion-body">
+                        <strong>Malabar Christain College <br>Calicut University</strong><br>B.A Economics <br>2019-2022
+                    </div>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
+                        Plus-two & SSLC
+                    </button>
+                </h2>
+                <div id="flush-collapseThree" class="accordion-collapse collapse"
+                    data-bs-parent="#accordionFlushExample">
+                    <div class="accordion-body">
+                         PLUS 2- Govt.HSS Medical College Campus - Chevayoor <br> SSLC - Presentation HSS Chevayoor
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+
+    <hr>
+
+    <div class="container-fluid">
+
+        <div class="col-lg-12">
+            <div class="project-h">
+                <h1 style="color: lightsalmon;"><a name="Projects"> Projects</h1></a>
+            </div>
+        </div>
+
+        <div class="projects-c">
+            <div class="row">
+                <div class=" col-md-4 ">
+                    <div class="card" style="width:100%; background-color: lightcyan; ">
+                        <img src="./pictures/p1.webp" class="card-img-top" alt="...">
+                        <div class="card-body ">
+                            <h5 class="card-title">Project 1</h5>
+                            <p class="card-text">Some quick example text to build on the card title and make up the bulk
+                                of
+                                the card's content.</p>
+                            <a href="#" class="btn btn-primary">Go somewhere</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class=" col-md-4 ">
+                    <div class="card" style="width:100%;background-color: lightgray;">
+                        <img src="./pictures/p2.webp" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">Project 2</h5>
+                            <p class="card-text">Some quick example text to build on the card title and make up the bulk
+                                of
+                                the card's content.</p>
+                            <a href="#" class="btn btn-primary">Go somewhere</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class=" col-md-4 ">
+                    <div class="card" style="width:100%; background-color: lightseagreen;">
+                        <img src="./pictures/p3.png" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">Project 3</h5>
+                            <p class="card-text">Some quick example text to build on the card title and make up the bulk
+                                of
+                                the card's content.</p>
+                            <a href="#" class="btn btn-primary">Go somewhere</a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="row">
+                <div class=" col-md-4 ">
+                    <div class="card" style="width:100%;background-color: lightyellow;">
+                        <img src="./pictures/p4.webp" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">Project 4</h5>
+                            <p class="card-text">Some quick example text to build on the card title and make up the bulk
+                                of
+                                the card's content.</p>
+                            <a href="#" class="btn btn-primary">Go somewhere</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                    <div class="card" style="width:100%;background-color: lightgreen;">
+                        <img src="./pictures/p5.jpg" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">Project 5</h5>
+                            <p class="card-text">Some quick example text to build on the card title and make up the bulk
+                                of
+                                the card's content.</p>
+                            <a href="#" class="btn btn-primary">Go somewhere</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                    <div class="card" style="width:100%;background-color: aliceblue;">
+                        <img src="./pictures/p6.webp" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">Project 6</h5>
+                            <p class="card-text">Some quick example text to build on the card title and make up the bulk
+                                of
+                                the card's content.</p>
+                            <a href="#" class="btn btn-primary">Go somewhere</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+    </div>
+
+    <hr>
+
+    <div class="container-fluid">
+        <div class="row">
+            <div class="skills">
+                <div class="skills-h">
+                    <h1><a name="Skills">Skills</h1></a>
+                </div>
+                <div class="skill-c row">
+                    <div class="col-6 col-md-3 text-right mb-4 skills-1">
+                        <img src="./pictures/html.png" alt="" width="60px" height="auto">
+                        html
+                    </div>
+                    <div class="col-6 col-md-3 text-right mb-4 skills-1">
+                        <img src="./pictures/css.png" alt="" width="40px" height="auto">
+                        css
+                    </div>
+                    <div class="col-6 col-md-3 text-right mb-4 skills-1">
+                        <img src="./pictures/java.png" alt="" width="100px" height="auto">
+                        Javascript
+                    </div>
+                    <div class="col-6 col-md-3 text-right mb-4 skills-1">
+                        <img src="./pictures/react.png" alt="" width="80px" height="auto">
+                        Reack
+                    </div>
+                    <div class="col-6 col-md-3 text-right mb-4 skills-1">
+                        <img src="./pictures/bootstrap.jpg" alt="" width="80px" height="auto">
+                        Bootstrap
+                    </div>
+                    <div class="col-6 col-md-3 text-right mb-4 skills-1">
+                        <img src="./pictures/vs code.png" alt="" width="100px" height="auto">
+                        Vscode
+                    </div>
+                    <div class="col-6 col-md-3 text-right mb-4 skills-1">
+                        <img src="./pictures/ai.png" alt="" width="60px" height="auto">
+                        AI
+                    </div>
+                    <div class="col-6 col-md-3 text-right mb-4 skills-1">
+                        <img src="./pictures/git hub.png" alt="" width="100px" height="auto">
+                        Github
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <hr>
+
+    <div class="container-fluid">
+        <div class="row">
+            <div class="contact-h">
+                <h1 style="color: lightsalmon;"><a name="Contact">Contact </h1></a>
+            </div>
+            <!-- <div class="contact"> -->
+            <div class="col-lg-6 col-md-12">
+
+                <div class="form">
+                    <div class="form-c">
+                        <input type="text" name="form" id="form-cnt" placeholder="Name">
+                    </div>
+                    <div class="form-c">
+                        <input type="email" name="form" id="form-cnt" placeholder="Email">
+                    </div>
+                    <div class="form-c">
+                        <textarea placeholder="Message" id="form-ccnt" rows="5"></textarea>
+                    </div>
+                    <div class="contact-btn">
+                        <button type="button" class="btn btn-dark p-3 m-3">SEND</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6 col-md-1">
+                <div class="info">
+
+                    <div class="info-c">
+                        <a href="" style="text-decoration: none; color: lightslategray;"><img
+                                src="./pictures/call logo.png" alt="" width="60px">Call : +971507083556</a>
+                    </div>
+                    <div class="info-c">
+                        <a href="https://www.instagram.com/shamna_z_" style="text-decoration: none; color: lightslategray;"><img
+                                src="./pictures/insta v.png" alt="" width="60px" >shamna_z_</a>
+                    </div>
+                    <div class="info-c">
+                        <a href="" style="text-decoration: none; color: lightslategrey;"><img
+                                src="./pictures/email v.jpg" alt="" width="60px">shamnasha90003@gamil.com</a>
+                    </div>
+                </div>
+                <!-- </div> -->
+                <!-- </div> -->
+            </div>
+        </div>
+        <hr>
+        <div class="container">
+            <div class="row">
+                <div class="footer">
+                    ----------- Shamna--------------
+                </div>
+            </div>
+        </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+            crossorigin="anonymous"></script>
+</body>
+
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+    crossorigin="anonymous"></script>
+</body>
+
+</html>
